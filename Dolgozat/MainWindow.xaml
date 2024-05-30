@@ -1,0 +1,82 @@
+﻿<Window x:Class="Dolgozat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dolgozat"
+        mc:Ignorable="d"
+         Height="450" Width="800"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Border Background="#272537"
+                CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        
+
+        <TextBlock Text="School paper"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="20,0,0,0"/>
+
+
+        <StackPanel Grid.Row="1">
+
+        <RadioButton 
+         Content="Task 1"
+         Height="50"
+         Foreground="White"
+         FontSize="14"
+         x:Name="radiobtn1"
+         Style="{StaticResource MenuButtonTheme}" Checked="radiobtn1_Checked"/>
+
+         <RadioButton 
+         Content="Task 2"
+         Height="50"
+         Foreground="White"
+         FontSize="14"
+         x:Name="radiobtn2"
+         Style="{StaticResource MenuButtonTheme}" Checked="radiobtn2_Checked"/>
+
+        <RadioButton 
+         Content="Task 3"
+         Height="50"
+         Foreground="White"
+         FontSize="14"
+         x:Name="radiobtn3"
+         Style="{StaticResource MenuButtonTheme}" Checked="radiobtn3_Checked"/>
+         <RadioButton 
+         Content="Close"
+         Height="50"
+         Foreground="White"
+         FontSize="14"
+         Style="{StaticResource MenuButtonTheme}"
+         Checked="WindowClose"/>
+            </StackPanel>
+
+
+
+
+            <ContentControl Grid.Row="1"
+                           Grid.Column="1"
+                           x:Name="Control"
+                           Margin="11 11"/>
+
+
+        </Grid>
+    </Border>
+
+</Window>
